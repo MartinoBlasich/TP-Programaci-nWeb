@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Mi E-commerce</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/7745641707.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Tienda</h1>
+        <nav>
+            <button class="icon-btn" title="Alternar Tema"><i class="fa-solid fa-moon icon"></i></button>
+            <button title="Vista actual: Usuario. Clic para cambiar" style="background-color: #ff9800;">Cambiar a Admin</button>
+            <a href="cuenta.html"><button style="background-color: #6c757d;">Mi Cuenta</button></a>
+            <button><i class="fa-solid fa-cart-shopping icon"></i></button>
+        </nav>
+    </header>
+
+    <div class="toolbar">
+        <h2>Productos Disponibles</h2>
+    </div>
+
+    <main>
+        <!-- Cambiando esta clase por "catalogo-list" con JS en el futuro, se verá como lista -->
+        <div class="catalogo-grid">
+            
+            <!-- ITEM 1 -->
+            <article class="tarjeta">
+                <!-- Imagen de muestra -->
+                <img src="https://via.placeholder.com/300x200" alt="Producto 1">
+                <h3>Auriculares Inalámbricos</h3>
+                <p>Excelente calidad de sonido con cancelación de ruido.</p>
+                <h4 style="margin: 10px 0;">$ 15.000</h4>
+                
+                <div class="acciones-tarjeta">
+                    <button class="icon-btn" title="Marcar como Favorito"><i class="fa-solid fa-heart icon"></i></button>
+                    <button><i class="fa-solid fa-cart-shopping icon"></i></button>
+                </div>
+            </article>
+
+            <!-- ITEM 2 -->
+            <article class="tarjeta">
+                <img src="https://via.placeholder.com/300x200" alt="Producto 2">
+                <h3>Teclado Mecánico</h3>
+                <p>Teclado retroiluminado ideal para programar o jugar.</p>
+                <h4 style="margin: 10px 0;">$ 22.000</h4>
+                
+                <div class="acciones-tarjeta">
+                    <button class="icon-btn" title="Quitar de Favoritos"><i class="fa-solid fa-heart icon"></i></button>
+                    <button><i class="fa-solid fa-cart-shopping icon"></i></button>
+                </div>
+            </article>
+
+            <!-- ITEM 3 -->
+            <article class="tarjeta">
+                <img src="https://via.placeholder.com/300x200" alt="Producto 3">
+                <h3>Mouse Ergonómico</h3>
+                <p>Cuida tu muñeca durante largas horas de trabajo.</p>
+                <h4 style="margin: 10px 0;">$ 9.500</h4>
+                
+                <div class="acciones-tarjeta">
+                    <button class="icon-btn" title="Marcar como Favorito"><i class="fa-solid fa-heart icon"></i></button>
+                    <button><i class="fa-solid fa-cart-shopping icon"></i></button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>
