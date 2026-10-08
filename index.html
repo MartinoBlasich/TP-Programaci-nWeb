@@ -2,35 +2,246 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso - Mi E-commerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MenuPlanner - Organización Semanal</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="https://kit.fontawesome.com/7745641707.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Tema Claro/Oscuro en Login también -->
-    <header>
-        <h1>Mi Tienda</h1>
-        <button class="icon-btn" title="Alternar Tema Claro/Oscuro">🌓</button>
+     <header>
+        <div class="navbar">
+            <h1>MenuPlanner</h1>
+            <nav>
+                <!-- 
+                ATENCIÓN: En tu entrega local, usa vínculos a archivos reales:
+                <li><a href="index.html">Login</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Mi Semana</a></li>
+                <li><a href="perfil.html">Mi Cuenta</a></li>
+                -->
+                <ul class="nav-links">
+                    <li><a href="#login-view">Login</a></li>
+                    <li><a href="#admin-view">Admin</a></li>
+                    <li><a href="#user-view">Catálogo</a></li>
+                    <li><a href="#cart-view">Mi Semana</a></li>
+                    <li><a href="#account-view">Mi Cuenta</a></li>
+                    <li><button type="button" style="padding: 5px; background: #333; font-size:0.8em;">Modo Oscuro</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form action="catalogo.html"> <!-- Por ahora simula ir al catalogo -->
-            <label for="usuario">Usuario / Email</label>
-            <input type="text" id="usuario" placeholder="Ej: admin@tienda.com">
-            
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" placeholder="********">
-            
-            <button type="submit" style="width: 100%; margin-top: 15px;">Ingresar</button>
-        </form>
+    <main>
 
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
-        
-        <h3>¿No hay usuarios?</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 10px;">El sistema detecta que no hay Administradores.</p>
-        <button style="width: 100%; background-color: #28a745;">Crear Primer Administrador</button>
+        <!-- 
+        ===================================================================
+        ARCHIVO: index.html
+        ===================================================================
+        Copia SOLO esta etiqueta <section id="login-view">...</section> 
+        y ponla dentro del <main> de tu archivo index.html
+        -->
+        <section id="login-view">
+            <h2 class="section-title">Ingreso al Sistema</h2>
+            <div class="alert-warning">
+                <p><strong>Atención:</strong> No se detectaron usuarios registrados. Por favor, complete el formulario para crear el <em>primer usuario Administrador</em>.</p>
+            </div>
+            <form action="#" method="POST" style="max-width: 400px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="user_email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="user_pass" required>
+                </div>
+                <button type="submit" style="width: 100%;">Iniciar Sesión / Crear Admin</button>
+            </form>
+        </section>
+
+        <!-- 
+        ===================================================================
+        ARCHIVO: admin.html
+        ===================================================================
+        Copia SOLO esta etiqueta <section id="admin-view">...</section> 
+        y ponla dentro del <main> de tu archivo admin.html
+        -->
+        <section id="admin-view">
+            <h2 class="section-title">Panel de Administración - Gestión de Recetas</h2>
+            <div class="admin-layout">
+                <div class="admin-form">
+                    <h3>Alta de Nuevo Ítem</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="titulo">Nombre de la Receta:</label>
+                            <input type="text" id="titulo" name="titulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tiempo">Tiempo (min):</label>
+                            <input type="number" id="tiempo" name="tiempo">
+                        </div>
+                        <div class="form-group">
+                            <label for="ingredientes">Ingredientes:</label>
+                            <textarea id="ingredientes" name="ingredientes" rows="4"></textarea>
+                        </div>
+                        <button type="submit">Guardar Receta</button>
+                    </form>
+                </div>
+
+                <div class="admin-list">
+                    <h3>Recetas Registradas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Tiempo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Milanesas con Puré</td>
+                                <td>45 min</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tarta de Acelga</td>
+                                <td>60 min</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ===================================================================
+        ARCHIVO: catalogo.html
+        ===================================================================
+        Copia SOLO esta etiqueta <section id="user-view">...</section> 
+        y ponla dentro del <main> de tu archivo catalogo.html
+        -->
+        <section id="user-view">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h2 class="section-title" style="margin:0; border:none;">Descubrir Recetas</h2>
+                <div>
+                    <span style="font-size: 0.9em; margin-right: 10px;">Vistas:</span>
+                    <button type="button" style="padding: 5px 10px;">Grid</button>
+                    <button type="button" style="padding: 5px 10px; background-color:#ccc; color:#333;">Lista</button>
+                </div>
+            </div>
+
+            <div class="grid-catalogo">
+                <article class="card">
+                    <button class="btn-favorito" type="button">♥</button>
+                    <figure style="margin:0;">
+                        <img src="https://placehold.co/400x300/22c55e/ffffff?text=Ensalada" alt="Ensalada fresca">
+                        <figcaption style="display:none;">Ensalada</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Ensalada César</h3>
+                        <p>Plato fresco para almuerzo.</p>
+                        <p><small>Tiempo: <time datetime="PT15M">15 minutos</time></small></p>
+                        <button type="button">+ Agregar al Menú</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <button class="btn-favorito" type="button" style="color: grey;">♥</button>
+                    <figure style="margin:0;">
+                        <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Pasta" alt="Fideos">
+                        <figcaption style="display:none;">Pasta</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Fideos Boloñesa</h3>
+                        <p>Receta italiana casera.</p>
+                        <p><small>Tiempo: <time datetime="PT40M">40 minutos</time></small></p>
+                        <button type="button">+ Agregar al Menú</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 
+        ===================================================================
+        ARCHIVO: carrito.html
+        ===================================================================
+        Copia SOLO esta etiqueta <section id="cart-view">...</section> 
+        y ponla dentro del <main> de tu archivo carrito.html
+        -->
+        <section id="cart-view">
+            <h2 class="section-title">Tu Planificador y Compras (Carrito)</h2>
+            <div class="planificador-container">
+                <div class="dias-semana">
+                    <h3>Comidas Seleccionadas</h3>
+                    <br>
+                    <div class="dia-item">
+                        <span class="dia-tag">Lunes</span>
+                        <div><strong>Ensalada César</strong></div>
+                        <button type="button" style="background:red; padding: 5px;">X</button>
+                    </div>
+                    <div class="dia-item">
+                        <span class="dia-tag">Martes</span>
+                        <div><strong>Fideos Boloñesa</strong></div>
+                        <button type="button" style="background:red; padding: 5px;">X</button>
+                    </div>
+                </div>
+
+                <div class="lista-compras">
+                    <h3>Lista de Supermercado</h3>
+                    <br>
+                    <h4>Verdulería</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>1 Planta de Lechuga</li>
+                        <li>2 Cebollas</li>
+                    </ul>
+                    <h4>Almacén</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>1 Paquete de Croutons</li>
+                        <li>Puré de Tomate</li>
+                    </ul>
+                    <button type="button" style="width: 100%; margin-top: 10px;">Guardar Lista</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ===================================================================
+        ARCHIVO: perfil.html
+        ===================================================================
+        Copia SOLO esta etiqueta <section id="account-view">...</section> 
+        y ponla dentro del <main> de tu archivo perfil.html
+        -->
+        <section id="account-view">
+            <h2 class="section-title">Mi Perfil</h2>
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                <img src="https://placehold.co/100x100/ccc/333?text=U" alt="Perfil" style="border-radius: 50%;">
+                <div>
+                    <h3 style="margin-bottom: 5px;">Juan Pérez</h3>
+                    <p>juan.perez@email.com</p>
+                    <p><small>Perfil: <strong>Administrador</strong></small></p>
+                </div>
+            </div>
+            <h3 style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Mis Favoritas</h3>
+            <div class="grid-catalogo">
+                <article class="card">
+                    <button class="btn-favorito" type="button">♥</button>
+                    <img src="https://placehold.co/400x200/22c55e/ffffff?text=Ensalada" alt="Ensalada">
+                    <div class="card-body"><h4>Ensalada César</h4></div>
+                </article>
+            </div>
+        </section>
+
     </main>
+
+    <!-- 
+    ===================================================================
+    FOOTER COMÚN (Para TODOS los archivos .html)
+    ===================================================================
+    -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 2em; margin-top: auto;">
+        <p><small>&copy; 2026 MenuPlanner. Trabajo Práctico Modularizado.</small></p>
+    </footer>
 </body>
 </html>
