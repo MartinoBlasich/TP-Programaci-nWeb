@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MenuPlanner - Organización Semanal</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/7745641707.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <header>
+        <div class="navbar">
+            <h1>MenuPlanner</h1>
+            <nav>
+                <!-- 
+                ATENCIÓN: En tu entrega local, usa vínculos a archivos reales:
+                <li><a href="index.html">Login</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Mi Semana</a></li>
+                <li><a href="perfil.html">Mi Cuenta</a></li>
+                -->
+                <ul class="nav-links">
+                    <li><a href="#login-view">Login</a></li>
+                    <li><a href="#admin-view">Admin</a></li>
+                    <li><a href="#user-view">Catálogo</a></li>
+                    <li><a href="#cart-view">Mi Semana</a></li>
+                    <li><a href="#account-view">Mi Cuenta</a></li>
+                    <li><button type="button" style="padding: 5px; background: #333; font-size:0.8em;">Modo Oscuro</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+     <section id="user-view">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h2 class="section-title" style="margin:0; border:none;">Descubrir Recetas</h2>
+                <div>
+                    <span style="font-size: 0.9em; margin-right: 10px;">Vistas:</span>
+                    <button type="button" style="padding: 5px 10px;">Grid</button>
+                    <button type="button" style="padding: 5px 10px; background-color:#ccc; color:#333;">Lista</button>
+                </div>
+            </div>
+
+            <div class="grid-catalogo">
+                <article class="card">
+                    <button class="btn-favorito" type="button">♥</button>
+                    <figure style="margin:0;">
+                        <img src="https://placehold.co/400x300/22c55e/ffffff?text=Ensalada" alt="Ensalada fresca">
+                        <figcaption style="display:none;">Ensalada</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Ensalada César</h3>
+                        <p>Plato fresco para almuerzo.</p>
+                        <p><small>Tiempo: <time datetime="PT15M">15 minutos</time></small></p>
+                        <button type="button">+ Agregar al Menú</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <button class="btn-favorito" type="button" style="color: grey;">♥</button>
+                    <figure style="margin:0;">
+                        <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Pasta" alt="Fideos">
+                        <figcaption style="display:none;">Pasta</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Fideos Boloñesa</h3>
+                        <p>Receta italiana casera.</p>
+                        <p><small>Tiempo: <time datetime="PT40M">40 minutos</time></small></p>
+                        <button type="button">+ Agregar al Menú</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+            <footer style="background-color: #333; color: white; text-align: center; padding: 2em; margin-top: auto;">
+        <p><small>&copy; 2026 MenuPlanner. Trabajo Práctico Modularizado.</small></p>
+    </footer>
+</body>
+</html>

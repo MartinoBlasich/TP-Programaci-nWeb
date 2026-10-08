@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MenuPlanner - Organización Semanal</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/7745641707.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <header>
+        <div class="navbar">
+            <h1>MenuPlanner</h1>
+            <nav>
+                <!-- 
+                ATENCIÓN: En tu entrega local, usa vínculos a archivos reales:
+                <li><a href="index.html">Login</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Mi Semana</a></li>
+                <li><a href="perfil.html">Mi Cuenta</a></li>
+                -->
+                <ul class="nav-links">
+                    <li><a href="#login-view">Login</a></li>
+                    <li><a href="#admin-view">Admin</a></li>
+                    <li><a href="#user-view">Catálogo</a></li>
+                    <li><a href="#cart-view">Mi Semana</a></li>
+                    <li><a href="#account-view">Mi Cuenta</a></li>
+                    <li><button type="button" style="padding: 5px; background: #333; font-size:0.8em;">Modo Oscuro</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<body>
+     <section id="cart-view">
+            <h2 class="section-title">Tu Planificador y Compras (Carrito)</h2>
+            <div class="planificador-container">
+                <div class="dias-semana">
+                    <h3>Comidas Seleccionadas</h3>
+                    <br>
+                    <div class="dia-item">
+                        <span class="dia-tag">Lunes</span>
+                        <div><strong>Ensalada César</strong></div>
+                        <button type="button" style="background:red; padding: 5px;">X</button>
+                    </div>
+                    <div class="dia-item">
+                        <span class="dia-tag">Martes</span>
+                        <div><strong>Fideos Boloñesa</strong></div>
+                        <button type="button" style="background:red; padding: 5px;">X</button>
+                    </div>
+                </div>
+
+                <div class="lista-compras">
+                    <h3>Lista de Supermercado</h3>
+                    <br>
+                    <h4>Verdulería</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>1 Planta de Lechuga</li>
+                        <li>2 Cebollas</li>
+                    </ul>
+                    <h4>Almacén</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>1 Paquete de Croutons</li>
+                        <li>Puré de Tomate</li>
+                    </ul>
+                    <button type="button" style="width: 100%; margin-top: 10px;">Guardar Lista</button>
+                </div>
+            </div>
+        </section>
+
+            <footer style="background-color: #333; color: white; text-align: center; padding: 2em; margin-top: auto;">
+        <p><small>&copy; 2026 MenuPlanner. Trabajo Práctico Modularizado.</small></p>
+    </footer>
+</body>
+</html>
